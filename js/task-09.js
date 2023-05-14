@@ -7,9 +7,10 @@ const refs = {
 refs.button.addEventListener('click', onChangeBacgroundColor);
 
 function onChangeBacgroundColor(event) {
-  getRandomHexColor();
-  refs.body.style.backgroundColor = getRandomHexColor();
-  refs.bacgroundTitle.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+ 
+  refs.body.style.backgroundColor = randomColor;
+  refs.bacgroundTitle.textContent = randomColor;
 }
 
 function getRandomHexColor() {
@@ -17,4 +18,3 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-

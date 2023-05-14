@@ -4,12 +4,11 @@ const refs = {
     counterValue: document.querySelector('#value'),
 }
 
+let counterValue = 0;
 
 refs.btnDecrement.addEventListener('click', () => {
-    refs.counterValue.textContent = Number(refs.counterValue.textContent) - 1;
+    refs.counterValue.textContent = counterValue -= 1;
 });
 refs.btnIncrement.addEventListener('click', () => {
-    refs.counterValue.textContent = Number(refs.counterValue.textContent) + 1;
+    refs.counterValue.textContent = counterValue += 1;
 });
-
-

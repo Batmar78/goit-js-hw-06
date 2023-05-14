@@ -12,10 +12,16 @@ function onSearch(event) {
     if (!email.value.length || !password.value.length) {
         alert(`Всі поля повинні бути заповнені`);
     } else {
-        const formData = new FormData(event.currentTarget);
-        formData.forEach((value, name) => {
-            console.log(name, value);
-        })
+
+        const mail = event.currentTarget.elements.email.value;
+        const password = event.currentTarget.elements.password.value;
+        const formData = {
+            mail,
+            password,
+        };
+        
+        console.log(formData);
+        
         event.currentTarget.reset();   
     }    
 };
